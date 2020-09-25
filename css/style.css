@@ -1,7 +1,5 @@
 /* regole base */
 
-
-
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -17,7 +15,8 @@ body {
     clear: both;
 }
 
-ol, ul {
+ol,
+ul {
     list-style-type: none;
 }
 
@@ -67,7 +66,9 @@ p {
     padding: 15px 30px;
 }
 
+
 /* fine regole base */
+
 
 /* header */
 
@@ -88,7 +89,7 @@ header .navbar-default .navbar-brand {
 }
 
 header .navbar-default .navbar-brand:hover {
-   color: #fff;
+    color: #fff;
 }
 
 header .navbar-default .navbar-nav li a {
@@ -104,9 +105,12 @@ header .navbar-default .navbar-nav li a:hover {
     color: #1abc9c;
 }
 
+
 /* fine header */
 
+
 /*********** main */
+
 
 /* hero */
 
@@ -121,7 +125,7 @@ main #hero .container .row .col-lg-12 .hero-box {
 }
 
 main #hero .container .row .col-lg-12 .hero-box .title-hero h1 {
-   color: #fff;
+    color: #fff;
     margin-top: 40px;
 }
 
@@ -135,18 +139,18 @@ main #hero .container .row .col-lg-12 .hero-box .img-hero img {
     display: inline-block;
 }
 
-main #hero .container .row .col-lg-12 .hero-box .divider .icon-hero .fa-star{
+main #hero .container .row .col-lg-12 .hero-box .divider .icon-hero .fa-star {
     color: white;
 }
 
-main #hero .container .row .col-lg-12 .hero-box .divider{
+main #hero .container .row .col-lg-12 .hero-box .divider {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
 }
 
-main #hero .container .row .col-lg-12 .hero-box .divider .divider-left{
+main #hero .container .row .col-lg-12 .hero-box .divider .divider-left {
     width: 100%;
     max-width: 7rem;
     height: 0.25rem;
@@ -154,13 +158,14 @@ main #hero .container .row .col-lg-12 .hero-box .divider .divider-left{
     margin-right: 10px;
 }
 
-main #hero .container .row .col-lg-12 .hero-box .divider .divider-right{
+main #hero .container .row .col-lg-12 .hero-box .divider .divider-right {
     width: 100%;
     max-width: 7rem;
     height: 0.25rem;
     background-color: #fff;
     margin-left: 10px;
 }
+
 
 /* fine hero */
 
@@ -169,19 +174,18 @@ main #portfolio .container .row .col-lg-12 .folio-box {
     text-align: center;
 }
 
-
-main #portfolio .container .row .col-lg-12 .folio-box .divider .icon-hero .fa-star{
+main #portfolio .container .row .col-lg-12 .folio-box .divider .icon-hero .fa-star {
     color: #2C3F51;
 }
 
-main #portfolio .container .row .col-lg-12 .folio-box .divider{
+main #portfolio .container .row .col-lg-12 .folio-box .divider {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
 }
 
-main #portfolio .container .row .col-lg-12 .folio-box .divider .divider-left{
+main #portfolio .container .row .col-lg-12 .folio-box .divider .divider-left {
     width: 100%;
     max-width: 7rem;
     height: 0.25rem;
@@ -189,7 +193,7 @@ main #portfolio .container .row .col-lg-12 .folio-box .divider .divider-left{
     margin-right: 10px;
 }
 
-main #portfolio .container .row .col-lg-12 .folio-box .divider .divider-right{
+main #portfolio .container .row .col-lg-12 .folio-box .divider .divider-right {
     width: 100%;
     max-width: 7rem;
     height: 0.25rem;
@@ -199,14 +203,45 @@ main #portfolio .container .row .col-lg-12 .folio-box .divider .divider-right{
 
 main #portfolio .container .row .col-lg-12 .folio-box img {
     width: 322px;
-    margin-top: 40px;
     border-radius: 5px;
 }
 
-main #portfolio .container .row .col-lg-12 .folio-box img-box {
+main #portfolio .container .row .col-lg-12 .folio-box .img-box {
+    position: relative;
+    overflow: hidden;
+    width: 322px;
     margin-top: 40px;
-
+    text-align: center;
+    display: inline-block;
 }
+
+main #portfolio .container .row .col-lg-12 .folio-box .img-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: #FFF;
+}
+
+main #portfolio .container .row .col-lg-12 .folio-box .img-box:hover .overlay {
+    display: block;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(26, 188, 156, 0.9);
+}
+
+main #portfolio .container .row .col-lg-12 .folio-box .img-box:hover .overlay:after {
+    content: '+';
+    position: absolute;
+    font-size: 100px;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 /* fine portfolio */
 
@@ -237,6 +272,12 @@ main #about .container .row .col-lg-12 .about-box .box-button a.btn {
     border: 2px solid white;
 }
 
+main #about .container .row .col-lg-12 .about-box .box-button a.btn:hover {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
 main #about .container .row .col-lg-12 .about-box .box-button a.btn:before {
     font-family: "Font Awesome 5 Free";
     content: "\f019";
@@ -245,14 +286,14 @@ main #about .container .row .col-lg-12 .about-box .box-button a.btn:before {
     font-weight: 900;
 }
 
-main #about .container .row .col-lg-12 .about-box .divider{
+main #about .container .row .col-lg-12 .about-box .divider {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
 }
 
-main #about .container .row .col-lg-12 .about-box .divider .divider-left{
+main #about .container .row .col-lg-12 .about-box .divider .divider-left {
     width: 100%;
     max-width: 7rem;
     height: 0.25rem;
@@ -260,7 +301,7 @@ main #about .container .row .col-lg-12 .about-box .divider .divider-left{
     margin-right: 10px;
 }
 
-main #about .container .row .col-lg-12 .about-box .divider .divider-right{
+main #about .container .row .col-lg-12 .about-box .divider .divider-right {
     width: 100%;
     max-width: 7rem;
     height: 0.25rem;
@@ -268,7 +309,9 @@ main #about .container .row .col-lg-12 .about-box .divider .divider-right{
     margin-left: 10px;
 }
 
+
 /* fine About */
+
 
 /* form */
 
@@ -278,14 +321,14 @@ main #c-form .container .row .col-lg-12 .form-box {
     color: #2C3F51;
 }
 
-main #c-form .container .row .col-lg-12 .form-box .divider{
+main #c-form .container .row .col-lg-12 .form-box .divider {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
 }
 
-main #c-form .container .row .col-lg-12 .form-box .divider .divider-left{
+main #c-form .container .row .col-lg-12 .form-box .divider .divider-left {
     width: 100%;
     max-width: 7rem;
     height: 0.25rem;
@@ -293,7 +336,7 @@ main #c-form .container .row .col-lg-12 .form-box .divider .divider-left{
     margin-right: 10px;
 }
 
-main #c-form .container .row .col-lg-12 .form-box .divider .divider-right{
+main #c-form .container .row .col-lg-12 .form-box .divider .divider-right {
     width: 100%;
     max-width: 7rem;
     height: 0.25rem;
@@ -319,26 +362,31 @@ main #c-form .container .row .col-lg-12 .form-box .box-form .form-control {
     border-radius: unset;
 }
 
-main #c-form .container .row .col-lg-12 .form-box .box-form a{
+main #c-form .container .row .col-lg-12 .form-box .box-form a {
     padding: 15px 30px;
     font-size: 24px;
 }
 
+
 /* fine form */
 
+
 /********** fine main */
+
 
 /* Footer */
 
 footer #bottom {
-    background-color: #1a252f;;
+    background-color: #1a252f;
+;
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: #fff;
 }
 
 footer #top {
-    background-color: #2c3e50;;
+    background-color: #2c3e50;
+;
     padding-top: 5rem;
     padding-bottom: 5rem;
     color: #fff;
@@ -362,7 +410,6 @@ footer .container .row .col-lg-12 .footer-top .col-lg-4:nth-child(2) .icon .fab 
 
 footer .container .row .col-lg-12 .footer-top .col-lg-4:nth-child(2) .icon .fa-facebook-f {
     padding: 10px 14px;
-
 }
 
 footer .container .row .col-lg-12 .footer-top .col-lg-4:last-child a {
@@ -376,9 +423,10 @@ footer .container .row .col-lg-12 .footer-top .col-lg-4:last-child a:hover {
     text-decoration: underline;
 }
 
-footer .container .row .col-lg-12 .footer-bot{
+footer .container .row .col-lg-12 .footer-bot {
     color: white;
 }
+
 
 /*
   ##Device = Tablets, Ipads (portrait)
@@ -386,54 +434,51 @@ footer .container .row .col-lg-12 .footer-bot{
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
-
     .navbar-right {
         display: none;
     }
-
     .navbar-toggle {
         display: inline-block;
-        float: right;
+        position: absolute;
+        right: 10px;
     }
-
     h1 {
         font-size: 44px;
         font-weight: 700;
         text-transform: uppercase;
     }
-
     h2 {
         font-size: 28px;
         font-weight: 700;
         text-transform: uppercase;
     }
-
     h4 {
         font-size: 18px;
         font-weight: 700;
         text-transform: uppercase;
     }
-
     p {
         color: white;
         font-size: 16px;
     }
-
-
+    .row {
+        margin: unset;
+    }
+    main #portfolio .container .row .col-lg-12 .col-md-6 {
+        max-width: 50%;
+        float: left;
+    }
     footer .container .row .col-lg-12 .footer-top .col-lg-4 {
         margin-bottom: 50px;
     }
-
     footer .container .row .col-lg-12 .footer-top .col-lg-4:last-child {
         margin-bottom: unset;
     }
-
     footer #bottom {
         display: none;
     }
-
 }
+
 
 /*
   ##Device = Most of the Smartphones Mobiles (Portrait)
@@ -441,38 +486,32 @@ footer .container .row .col-lg-12 .footer-bot{
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-
-
+    img {
+        width: 100%;
+    }
     h1 {
         font-size: 34px;
         font-weight: 700;
         text-transform: uppercase;
     }
-
     h2 {
         font-size: 28px;
         font-weight: 700;
         text-transform: uppercase;
     }
-
     h4 {
         font-size: 22px;
         font-weight: 700;
         text-transform: uppercase;
     }
-
     p {
         color: white;
         font-size: 14px;
     }
-
     header .navbar-default .navbar-brand {
         font-size: 18px;
     }
-
     footer .container .row .col-lg-12 .footer-top .col-lg-4 {
         margin-bottom: 60px;
     }
-
 }
-
